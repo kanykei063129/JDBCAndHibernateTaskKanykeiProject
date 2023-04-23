@@ -1,16 +1,20 @@
 package peaksoft.model;
 
-import javax.persistence.*;
+
+import jakarta.persistence.*;
 
 @Table
+@Entity(name = "users")
 public class User {
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_gen")
+    @SequenceGenerator(name = "user_seq", sequenceName = "user_gen", allocationSize = 1)
     private Long id;
 
     @Column
     private String name;
 
-    @Column
+    @Column(name = "last_name")
     private String lastName;
 
     @Column
@@ -56,5 +60,4 @@ public class User {
     public void setAge(Byte age) {
         this.age = age;
     }
-
 }
