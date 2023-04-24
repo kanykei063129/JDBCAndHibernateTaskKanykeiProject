@@ -24,7 +24,7 @@ public class UserDaoHibernateImpl implements UserDao {
         entityManager.createQuery("delete from users").executeUpdate();
         entityManager.getTransaction().commit();
         entityManager.close();
-        System.out.println("Table 'users' is dropped.");
+        System.out.println("Table 'users' is dropped");
     }
 
     @Override
