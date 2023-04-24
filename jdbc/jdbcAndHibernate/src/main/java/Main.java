@@ -1,5 +1,3 @@
-package peaksoft;
-
 import peaksoft.dao.UserDaoHibernateImpl;
 import peaksoft.service.UserService;
 import peaksoft.service.UserServiceImpl;
