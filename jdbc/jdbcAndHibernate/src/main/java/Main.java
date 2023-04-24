@@ -4,7 +4,7 @@ import peaksoft.service.UserServiceImpl;
 
 public class Main {
     public static void main(String[] args) {
-        UserService userService = new UserServiceImpl();
+        UserService userService = (UserService) new UserServiceImpl();
         UserDaoHibernateImpl userDaoHibernate = new UserDaoHibernateImpl();
 //        userService.createUsersTable();
 //        userService.dropUsersTable();
